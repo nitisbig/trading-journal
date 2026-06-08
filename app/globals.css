@@ -23,6 +23,24 @@
   --radius-card: 1rem;
 }
 
+/* Dark theme: re-map the same tokens so existing utilities re-theme. */
+.dark {
+  --color-app: #0b0f17;
+  --color-surface: #111827;
+  --color-surface-muted: #1b2434;
+  --color-border: #273043;
+
+  --color-ink: #f1f5f9;
+  --color-ink-muted: #9aa6b8;
+  --color-ink-subtle: #6b7689;
+
+  --color-profit: #22c55e;
+  --color-profit-soft: #14331f;
+  --color-loss: #f87171;
+  --color-loss-soft: #3a1d1d;
+  --color-brand: #22c55e;
+}
+
 html,
 body {
   background-color: var(--color-app);
