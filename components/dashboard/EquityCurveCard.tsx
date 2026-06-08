@@ -57,7 +57,7 @@ export function EquityCurveCard({ data, deltaPct }: EquityCurveCardProps) {
               tickFormatter={(v: number) => `$${Math.round(v / 1000)}k`}
             />
             <Tooltip
-              formatter={(value: number) => [formatCurrency(value), "Equity"]}
+              formatter={(value) => [formatCurrency(Number(value)), "Equity"]}
               contentStyle={{
                 borderRadius: 8,
                 border: "1px solid #ececef",
