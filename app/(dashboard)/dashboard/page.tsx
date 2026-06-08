@@ -21,7 +21,7 @@ export default function DashboardPage() {
 
       <div className="grid grid-cols-1 gap-4 p-4 sm:gap-6 sm:p-8 lg:grid-cols-3">
         {/* Main column */}
-        <div className="flex flex-col gap-4 sm:gap-6 lg:col-span-2">
+        <div className="flex min-w-0 flex-col gap-4 sm:gap-6 lg:col-span-2">
           <NetPnlCard kpis={kpis} />
           <EquityCurveCard
             data={equityCurve}
