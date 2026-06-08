@@ -81,7 +81,7 @@ export function Sidebar() {
       </div>
 
       <Button className={cn("w-full", collapsed && "px-0")} title="Add Trade">
-        <Plus className="h-4 w-4" />
+        <Plus className="h-4 w-4 shrink-0" />
         {!collapsed && "Add Trade"}
       </Button>
 
