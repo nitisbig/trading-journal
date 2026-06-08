@@ -19,7 +19,7 @@ export function NetPnlCard({ kpis }: { kpis: DashboardKpis }) {
       </div>
 
       <div
-        className={`text-5xl font-bold tracking-tight ${
+        className={`text-4xl font-bold tracking-tight sm:text-5xl ${
           positive ? "text-profit" : "text-loss"
         }`}
       >

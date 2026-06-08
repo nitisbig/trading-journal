@@ -1,5 +1,5 @@
 @AGENTS.md
-
+@DESIGN.md
 
 # CLAUDE.md — Trading Journal Web App
 

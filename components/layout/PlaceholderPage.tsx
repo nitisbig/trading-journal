@@ -11,7 +11,7 @@ export function PlaceholderPage({ title, description }: PlaceholderPageProps) {
   return (
     <>
       <Header title={title} />
-      <div className="p-8">
+      <div className="p-4 sm:p-8">
         <Card className="flex min-h-64 flex-col items-center justify-center gap-2 text-center">
           <h2 className="text-lg font-semibold text-ink">{title}</h2>
           <p className="max-w-sm text-sm text-ink-muted">{description}</p>

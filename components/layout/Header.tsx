@@ -10,9 +10,9 @@ interface HeaderProps {
 /** Top bar: page title + import note on the left, month picker on the right. */
 export function Header({ title, subtitle, period }: HeaderProps) {
   return (
-    <header className="flex items-start justify-between gap-4 border-b border-border bg-app px-8 py-5">
+    <header className="flex items-start justify-between gap-4 border-b border-border bg-app px-4 py-4 sm:px-8 sm:py-5">
       <div>
-        <h1 className="text-2xl font-bold text-ink">{title}</h1>
+        <h1 className="text-xl font-bold text-ink sm:text-2xl">{title}</h1>
         {subtitle && (
           <p className="mt-1 text-xs text-ink-subtle">{subtitle}</p>
         )}
