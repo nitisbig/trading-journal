@@ -7,6 +7,7 @@ import { Plus, TrendingUp, PanelLeftClose, PanelLeftOpen } from "lucide-react";
 import { NAV_ITEMS, NAV_FOOTER_ITEMS, type NavItem } from "@/constants/nav";
 import { Button } from "@/components/ui/Button";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { useAddTrade } from "@/components/journal/AddTradeProvider";
 import { cn } from "@/lib/utils/cn";
 
 function NavLink({
@@ -41,6 +42,7 @@ function NavLink({
 export function Sidebar() {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
+  const { open: openAddTrade } = useAddTrade();
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(`${href}/`);
 
@@ -80,7 +82,12 @@ export function Sidebar() {
         </button>
       </div>
 
-      <Button className={cn("w-full", collapsed && "px-0")} title="Add Trade">
+      <Button
+        type="button"
+        onClick={openAddTrade}
+        className={cn("w-full", collapsed && "px-0")}
+        title="Add Trade"
+      >
         <Plus className="h-4 w-4 shrink-0" />
         {!collapsed && "Add Trade"}
       </Button>

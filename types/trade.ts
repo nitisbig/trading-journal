@@ -57,6 +57,8 @@ export interface DashboardData {
   calendar: {
     month: string;
     year: number;
+    /** Weekday index (0=Sun) that the 1st of the month falls on. */
+    startWeekday: number;
     days: CalendarDay[];
   };
   lastImportedAt: string;

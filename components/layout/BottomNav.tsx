@@ -4,11 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Plus } from "lucide-react";
 import { NAV_ITEMS } from "@/constants/nav";
+import { useAddTrade } from "@/components/journal/AddTradeProvider";
 import { cn } from "@/lib/utils/cn";
 
 /** Mobile-only bottom tab bar with a floating Add Trade button. */
 export function BottomNav() {
   const pathname = usePathname();
+  const { open: openAddTrade } = useAddTrade();
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(`${href}/`);
 
@@ -18,6 +20,7 @@ export function BottomNav() {
       <button
         type="button"
         aria-label="Add Trade"
+        onClick={openAddTrade}
         className="fixed bottom-[4.5rem] right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-brand text-white shadow-lg transition-opacity hover:opacity-90 lg:hidden"
       >
         <Plus className="h-6 w-6" />
