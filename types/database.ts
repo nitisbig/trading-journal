@@ -17,6 +17,7 @@ export type Database = {
       trades: {
         Row: {
           created_at: string
+          deleted_at: string | null
           direction: string
           entry_at: string
           entry_price: number
@@ -26,6 +27,7 @@ export type Database = {
           notes: string | null
           pnl: number | null
           quantity: number
+          setup_type: string | null
           strategy: string | null
           symbol: string
           tags: string[] | null
@@ -33,6 +35,7 @@ export type Database = {
         }
         Insert: {
           created_at?: string
+          deleted_at?: string | null
           direction: string
           entry_at: string
           entry_price: number
@@ -42,6 +45,7 @@ export type Database = {
           notes?: string | null
           pnl?: number | null
           quantity: number
+          setup_type?: string | null
           strategy?: string | null
           symbol: string
           tags?: string[] | null
@@ -49,6 +53,7 @@ export type Database = {
         }
         Update: {
           created_at?: string
+          deleted_at?: string | null
           direction?: string
           entry_at?: string
           entry_price?: number
@@ -58,6 +63,7 @@ export type Database = {
           notes?: string | null
           pnl?: number | null
           quantity?: number
+          setup_type?: string | null
           strategy?: string | null
           symbol?: string
           tags?: string[] | null
@@ -70,7 +76,9 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      hard_delete_trade: { Args: { p_id: string }; Returns: undefined }
+      restore_trade: { Args: { p_id: string }; Returns: undefined }
+      soft_delete_trade: { Args: { p_id: string }; Returns: undefined }
     }
     Enums: {
       [_ in never]: never

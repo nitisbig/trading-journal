@@ -1,0 +1,31 @@
+{
+  "name": "trading-journal-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for the Trading Journal app — query, log, and analyze trades from any MCP client.",
+  "type": "module",
+  "bin": {
+    "trading-journal-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@supabase/supabase-js": "^2.108.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.0"
+  }
+}
